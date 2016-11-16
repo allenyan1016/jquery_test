@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		//JQ层次选择器，一共有后代选择器（空格），子代选择器（>），兄弟选择器（~），相邻选择器（+）四种
+		$(function(){
+			$("#i3~p").css("color","red");
+		})
+		//JQ属性选择器
+		$(function(){
+			$("div[class='c2']").css("color","red");
+		})
+		//以下为元素的属性操作：获取属性（attr），添加属性（attr），删除属性（removeAttr）
+		//使用JQ选择元素的属性
+		$(function(){
+			$("#but1").click(function(){
+				alert($("#img").attr("src"));
+			})
+			$("#but2").click(function(){
+				alert($("#img").attr("alt"));
+			})
+		})
+		//使用JQ为元素新增一个属性
+		$(function(){
+			$("#img").attr("title","marks");
+		})
+		//使用JQ为元素删掉一个属性
+		$(function(){
+			$("#img").removeAttr("title");
+		})
+		//使用JQ获取元素的内容：HTML内容，文本内容
+		//使用html（）方法获取元素的html内容
+		$(function(){
+			$("#but3").click(function(){
+				alert($("#i5").html());
+			})
+		})
+		$(function(){
+			$("#but4").click(function(){
+				alert($("#i6").html());
+			})
+		})
+		$(function(){
+			$("#but5").click(function(){
+				alert($("span").html());
+			})
+		})
+		//使用text（）方法获取元素的文本内容
+		$(function(){
+			$("#i7").html($("#i5").text());
+		})
+		/*
+		//使用html（）方法设置id为i7的元素的html内容
+		$(function(){
+			$("#i7").html("now u see me");
+		})*/
+		
+		//使用val（）方法可以获取元素的val值
+		$(function(){
+			$("#but6").click(function(){
+				alert($("#t1").val());
+			})
+		})
+		$(function(){
+			$("#but7").click(function(){
+				alert($("#t2").val());
+			})
+		})
+	</script>
+	<title></title>
+</head>
+<body>
+	<div id="i1" class="c1">
+		<p id="i3">你说什么</p>
+		<div id="i4">
+			<p>你说什么</p>
+			<div>
+				<p>你说什么</p>
+			</div>
+		</div>
+		<p>你说什么</p>
+		<p>你说什么</p>
+		<div id="i2" class="c2">
+			<span>你说什么</span>
+			<p>你说什么</p>
+		</div>
+		<p>你说什么</p>
+		<p>你说什么</p>
+	</div>
+	<img src="marks.jpg" alt="marks" id="img">
+	<input type="button" value="获取src" id="but1">
+	<input type="button" value="获取alt" id="but2">
+	<p id="i5"><strong>叶子</strong></p>
+	<p id="i6">叶子</p>
+	<input type="button" value="获取i5的html内容" id="but3">
+	<input type="button" value="获取i6的html内容" id="but4">
+	<input type="button" value="获取span的html内容" id="but5">
+	<p id="i7">你说什么</p>
+	<input type="text" name="" value="can u see me" id="t1">
+	<input type="text" name="" value="can u see me2" id="t2">
+	<input type="button" name="" value="获取t1的val" id="but6">
+	<input type="button" name="" value="获取t2的val" id="but7">
+</body>
+</html>
