@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		function openWin(){
+		window.open("http://www.baidu.com");
+		}
+		function moveWin(){
+		window.moveBy(-100,-100);
+		}
+		function time_delay(){
+			alert("2秒就看到了");
+		}
+		//setTimeout("time_delay()",10000);
+		//setInterval("time_delay()",2000)
+	</script>
+
+</head>
+<body>
+	<input type="button" onclick="openWin()" value="打开窗口">
+	<input type="button" onclick="moveWin()" value="移动窗口">
+	<p>两秒钟后将看到提示标语</p>
+</body>
+</html>
