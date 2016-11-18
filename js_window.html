@@ -14,7 +14,15 @@
 			alert("2秒就看到了");
 		}
 		//setTimeout("time_delay()",10000);
-		//setInterval("time_delay()",2000)
+		//setInterval("time_delay()",2000);
+		function confirmWin(){
+			if (window.confirm("你确定要跳转么？")){
+				window.open("http://cn.bing.com")
+			}
+			else{
+				window.alert("您取消了");
+			}
+		}
 	</script>
 
 </head>
@@ -22,5 +30,6 @@
 	<input type="button" onclick="openWin()" value="打开窗口">
 	<input type="button" onclick="moveWin()" value="移动窗口">
 	<p>两秒钟后将看到提示标语</p>
+	<input type="button" value="返回" onclick="confirmWin()">
 </body>
 </html>
