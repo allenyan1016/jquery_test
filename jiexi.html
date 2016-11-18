@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+
+	</head>
+	<body>
+		<form>
+			<textarea id="input_in"></textarea>
+			<input type="button" id="jiami" value="加密" onclick="jiam()">
+			<input type="button" id="jiemi" value="解密" onclick="jiem()">
+			<input type="reset" id="reset" value="重置">
+			<textarea id="input_out"></textarea>
+		</form>
+			<script type="text/javascript">
+			//在form表单中input中的ID不能与绑定事件的函数名相同，否则会报错“is not function”
+		function jiam(){
+			var a = document.getElementById("input_in").value;
+			document.getElementById("input_out").value= escape(a);
+		}
+		function jiem(){
+			var b =document.getElementById("input_in").value;
+			document.getElementById("input_out").value = unescape(b);
+		}
+	</script>
+	</body>
+</html>
+<!--示例代码
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+    //定义基本样式
+    <style type="text/css">
+        #txt-input,#txt-output
+        {
+            height:60px;
+        }
+    </style>
+    <script type="text/javascript">
+        //定义加密函数
+        function encrypt() 
+        {
+            //获取输入框的值
+            var str = document.getElementById("txt-input").value;
+            //将输入框的值加密，并赋给输出框
+            document.getElementById("txt-ouput").value = escape(str);
+        }
+        //定义解密函数
+        function decrypt() 
+        {
+            //获取输入框的值
+            var str = document.getElementById("txt-input").value;
+            //将输入框的值加密，并赋给输出框
+            document.getElementById("txt-ouput").value = unescape(str);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <textarea id="txt-input" cols="20"></textarea><br />
+        <input id="btn-encrypt" type="button" value="加密" onclick="encrypt()"/>
+        <input id="btn-decrypt" type="button" value="解密" onclick="decrypt()"/>
+        <input id="Reset1" type="reset" value="清空" /><br />
+        <textarea id="txt-ouput" cols="20"></textarea>
+    </form>
+</body>
+</html>
+-->
