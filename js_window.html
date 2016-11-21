@@ -48,8 +48,30 @@
 				document.title = "★☆★这是我的测试★☆★";
 				flag= 0;
 			}
+			/*
+			var p2= document.createElement("p");
+			var t2= document.createTextNode("这是用DOM创建的元素2");
+			p2.appendChild(t2);
+			document.body.appendChild(p2);
+			*/
 		}
 		//document.title="你看的见么";
+		
+		window.onload= function(){
+			var p2= document.createElement("p");
+			var t2= document.createTextNode("这是用DOM创建的元素2");
+			p2.appendChild(t2);
+			document.body.appendChild(p2);
+		}
+		/*
+		function onload_ceshi(){
+		var p3= document.createElement("p");
+		var t3= document.createTextNode("这是用DOM创建的元素3");
+		p3.appendChild(t3);
+		document.body.appendChild(p3);
+		}
+		onload_ceshi();
+		*/ 
 	</script>
 
 </head>
@@ -58,5 +80,63 @@
 	<input type="button" onclick="moveWin()" value="移动窗口">
 	<p>两秒钟后将看到提示标语</p>
 	<input type="button" value="返回" onclick="confirmWin()">
+	<div id="i1">
+		<p id="i2">HTML</p>
+		<p id="i3">CSS</p>
+	</div>
+	<p id="i4">JAVASCRIPT</p>
+	<script type="text/javascript">
+		var a = document.getElementById("i2");
+		document.write(a.parentNode);
+		//使用DOM操作创建一个p元素并为其写上内容添加至HTML文档中
+		var p1= document.createElement("p");
+		var t1= document.createTextNode("这是用DOM创建的元素");
+		p1.appendChild(t1);
+		document.body.appendChild(p1);
+		//使用DOM操作生成一张表格
+		var form_test = document.createElement("table");
+		for(j=1;j<3;j++){
+			var tr_test = document.createElement("tr");
+			form_test.appendChild(tr_test);
+		for(i=1;i<4;i++)
+		{
+			var td_test = document.createElement("td");
+			var td_text_test = document.createTextNode("这是第"+j+"行，第"+i+"列");
+			td_test.appendChild(td_text_test);
+			tr_test.appendChild(td_test);
+		}
+		}
+		document.body.appendChild(form_test);
+		//大学四年没有搞懂的东西，自学之后才算明白，简直废物
+		for(i=1;i<10;i++){
+			document.write("<br>");
+			for(j=1;j<=i;j++){
+				document.write(i*j+"="+i+"*"+j+" ");
+			}
+		}
+	</script>
+	<!--利用DOM操作实现输入文本之后插入显示在页面上-->
+	<br>
+**************************分隔线**********************************************	
+	<ul id="ul_test">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+	</ul>
+	<p>请输入要增加的额内容：</p>
+	<input type="text" name="" id="input_insert">
+	<input type="submit" name="提交" onclick="insert_test()">
+	<br>
+**************************分隔线**********************************************	
+	<script type="text/javascript">
+	//定义一个函数，触发之后可以在页面中特定的地方插入一条记录
+		function insert_test(){
+			var a = document.createElement("li");
+			var b = document.getElementById("input_insert").value;
+			var c = document.createTextNode(b);
+			a.appendChild(c);
+			document.getElementById("ul_test").appendChild(a); 
+		}
+	</script>
 </body>
 </html>
