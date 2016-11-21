@@ -125,17 +125,41 @@
 	</ul>
 	<p>请输入要增加的额内容：</p>
 	<input type="text" name="" id="input_insert">
-	<input type="submit" name="提交" onclick="insert_test()">
+	<input type="submit" name="提交" onclick="insert_test_qian()">
 	<br>
 **************************分隔线**********************************************	
+	<ol id="ol_test">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JS</li>
+		<li>PYTHON</li>
+		<li>JAVA</li>
+		<li>C++</li>
+		<li>C#</li>
+	</ol>
+	<input type="button" value="删除节点" onclick="delete_ele_test()">
 	<script type="text/javascript">
 	//定义一个函数，触发之后可以在页面中特定的地方插入一条记录
-		function insert_test(){
+		function insert_test_hou(){
 			var a = document.createElement("li");
 			var b = document.getElementById("input_insert").value;
 			var c = document.createTextNode(b);
 			a.appendChild(c);
 			document.getElementById("ul_test").appendChild(a); 
+		}
+		function insert_test_qian(){
+			var a = document.createElement("li");
+			var b = document.getElementById("input_insert").value;
+			var c = document.createTextNode(b);
+			a.appendChild(c);
+			document.getElementById("ul_test").insertBefore(a,document.getElementById("ul_test").firstChild); 
+		}
+		function delete_ele_test(){
+			var a= document.getElementById("ol_test");
+			//删除第一个节点
+			//a.removeChild(a.firstChild);
+			//删除最后一个节点
+			a.removeChild(a.lastChild);
 		}
 	</script>
 </body>
