@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title></title>
 	<script type="text/javascript">
-		function openWin(){
+		/*function openWin(){
 		window.open("http://www.baidu.com");
 		}
 		function moveWin(){
@@ -23,6 +23,33 @@
 				window.alert("您取消了");
 			}
 		}
+		function promptWin(){
+			var str = window.prompt("请随便输入一点东西：");
+			document.write("欢迎"+str+"到来");
+		}
+		//promptWin();
+		document.writeln(document.fileCreatedDate);
+		document.writeln(document.fileModifiedDate);
+		document.writeln(document.lastModified);
+		document.writeln(document.fileSize);
+		*/
+		//简单动态标题实现
+		var flag = 0;
+		window.onload= function(){
+			setInterval("title_change()",1000);
+		}
+		function title_change(){
+			if(flag == 0)
+			{
+				document.title = "☆★☆这是我的测试☆★☆";
+				flag =1;
+			}else
+			{
+				document.title = "★☆★这是我的测试★☆★";
+				flag= 0;
+			}
+		}
+		//document.title="你看的见么";
 	</script>
 
 </head>
