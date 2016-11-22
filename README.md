@@ -1,2 +1,2 @@
 # jquery_test
-### this si my js exercise
+### this is my js exercise
