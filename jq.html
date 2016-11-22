@@ -14,10 +14,25 @@
 				$a.html($("#put_in").val());
 				$("#list").append($a);	
 			})
+			//使用JQ插入节点
+			var $s1 = $("<p></p>");
+			var $s2 = $("<p></p>");
+			var $s3 = $("<p></p>");
+			var $s4 = $("<p></p>");
+			$s1.html("NMSL");
+			$s2.html("WSND");
+			$s3.html("尴了个尬");
+			$s4.html("烫了个发");
+			$("#list").before($s2);
+			$("#boo").prepend($s1);
+			$s2.attr("id","s2");
+			$s3.attr("id","s3");
+			$("#s2").after($s3);
+			$("#s3").append($s4);
 		})
 	</script>
 </head>
-<body>
+<body id="boo">
 	<ul id="list">
 		<li>HTML</li>
 		<li>CSS</li>
