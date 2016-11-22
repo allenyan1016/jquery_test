@@ -138,6 +138,13 @@
 		<li>C#</li>
 	</ol>
 	<input type="button" value="删除节点" onclick="delete_ele_test()">
+	<br>
+	<!--使用keyup事件记录输入的字符串长度-->
+	<input type="text" id="keyup_test" onkeyup="key_test()">
+	<div>输入的字符长度为:<span id="num_test">0</span></div>
+	<br>
+	<!--<input type="text" name="" placeholder="百度一下，你就知道">-->
+	<input type="text" value="百度一下，你就知道" id="search_test">
 	<script type="text/javascript">
 	//定义一个函数，触发之后可以在页面中特定的地方插入一条记录
 		function insert_test_hou(){
@@ -161,6 +168,26 @@
 			//删除最后一个节点
 			a.removeChild(a.lastChild);
 		}
+		//定义一个函数，可以计算输入的字符长度
+		function key_test(){
+			var a = document.getElementById("keyup_test");
+			var b = a.value.toString();
+			var c = document.getElementById("num_test");
+			c.innerHTML = b.length;
+		}
+		var s_1 = document.getElementById("search_test");
+		var v_1 = s_1.value;
+		s_1.onfocus = function(){
+			if (s_1.value == v_1){
+				s_1.value = " ";	
+			}
+		}
+		s_1.onblur = function(){
+			if (s_1.value== " "){
+				s_1.value= v_1;
+			}
+		}
+		
 	</script>
 </body>
 </html>
