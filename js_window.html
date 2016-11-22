@@ -75,7 +75,7 @@
 	</script>
 
 </head>
-<body>
+<body id="body_test">
 	<input type="button" onclick="openWin()" value="打开窗口">
 	<input type="button" onclick="moveWin()" value="移动窗口">
 	<p>两秒钟后将看到提示标语</p>
@@ -145,6 +145,9 @@
 	<br>
 	<!--<input type="text" name="" placeholder="百度一下，你就知道">-->
 	<input type="text" value="百度一下，你就知道" id="search_test">
+	<br>
+	<textarea  id="textarea_test" rows="10" cols="20"></textarea>
+	<p>输入的字符串长度为：</p><span id="num2">0</span>
 	<script type="text/javascript">
 	//定义一个函数，触发之后可以在页面中特定的地方插入一条记录
 		function insert_test_hou(){
@@ -187,7 +190,22 @@
 				s_1.value= v_1;
 			}
 		}
-		
+		textarea_test.onchange=function(){
+			var a = document.getElementById("textarea_test");
+			var b = document.getElementById("num2");
+			var c=a.value.toString();
+			b.innerHTML = c.length;
+		}
+		textarea_test.onselect = function(){
+			alert("你选择了多行文本");
+		}
+		var biaozhi = 0;
+		document.body.onclick=function(){
+			if (biaozhi==0){
+				window.open("http://www.baidu.com");
+			}
+			biaozhi =1;
+		}
 	</script>
 </body>
 </html>
