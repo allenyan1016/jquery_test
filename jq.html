@@ -39,9 +39,11 @@
 			 for(i=0;i<shuzu.length;i++){
 				var $s = "<li>"+shuzu[i]+"</li>";
 				$($l).append($s);
+				$($s).attr("class","c2");
 			}
 			//将无序数组添加到文档中
 			$("#boo").append($l);
+			$("#list").fadeIn();
 			})
 		})
 	</script>
