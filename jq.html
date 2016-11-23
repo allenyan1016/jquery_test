@@ -72,6 +72,21 @@
 			$("#text1").keyup(function(){
 				$("#div1").html($("#text1").val().toString().length);
 			})
+			//使用JQ实现搜索框内的文字显示
+			var $s1 = '<input id="search" type="text" value="百度你知道个P">'
+			var $b1 = '<input id="search_b" type="button" value="搜索">'
+			$("#boo").append($s1);
+			$("#boo").append($b1);
+			$("#search").focus(function(){
+				if($(this).val()=="百度你知道个P"){
+					$(this).val(" ");
+				}
+			})
+			$("#search").blur(function(){
+				if($(this).val()==" "){
+					$(this).val("百度你知道个P");
+				}
+			})
 		})
 	</script>
 </head>
