@@ -62,11 +62,20 @@
 			$("#li1").mouseup(function(){
 				alert("你松开了");
 			})
+			//使用JQ实现创建一个文本框及显示文本框输入字符串长度的文字
+			var $t1 = '<textarea id="text1" cols="20" rows="10"></textarea>';
+			var $div1 = "<div>输入的字符串数量是：</div>";
+			var $div2 = '<div id="div1">0</div>';
+			$("#boo").append($t1);
+			$("#boo").append($div1);
+			$("#boo").append($div2);
+			$("#text1").keyup(function(){
+				$("#div1").html($("#text1").val().toString().length);
+			})
 		})
 	</script>
 </head>
 <body id="boo">
-
 	<ul id="list">
 		<li id="li1">HTML</li>
 		<li id="li2">CSS</li>
@@ -75,5 +84,7 @@
 	<input type="text" name="" id="put_in">
 	<input type="submit" name="提交" value="提交" id="tijiao">
 	<input type="button" value="你是猪吗" id="nszm">
+<!-- 	<textarea cols="10" rows="10" id="text1"></textarea>
+	<div>输入的字符串数量是<div id="div1">0</div></div> -->
 </body>
 </html>
