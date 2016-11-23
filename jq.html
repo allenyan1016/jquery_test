@@ -43,7 +43,24 @@
 			}
 			//将无序数组添加到文档中
 			$("#boo").append($l);
-			$("#list").fadeIn();
+			})
+			$("#li1").click(function(){
+				alert("你是谁");
+			})
+			/*当一个元素同时绑定mouseover和click两个事件时，click事件不会生效，如果同时
+			绑定mouseout和click两个事件时，先执行mouseout事件，在执行click事件。如果
+			同时绑定mouseover和mouseout事件，mouseout事件不生效*/
+		/*	$("#li2").mouseover(function(){
+				alert("我是谁");
+			})
+			$("#li3").mouseout(function(){
+				alert("我离开了");
+			})*/
+			// $("#li1").mousedown(function(){
+			// 	alert("你点击了");
+			// })
+			$("#li1").mouseup(function(){
+				alert("你松开了");
 			})
 		})
 	</script>
@@ -51,9 +68,9 @@
 <body id="boo">
 
 	<ul id="list">
-		<li>HTML</li>
-		<li>CSS</li>
-		<li>JS</li>
+		<li id="li1">HTML</li>
+		<li id="li2">CSS</li>
+		<li id="li3">JS</li>
 	</ul>
 	<input type="text" name="" id="put_in">
 	<input type="submit" name="提交" value="提交" id="tijiao">
