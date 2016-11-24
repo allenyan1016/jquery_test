@@ -10,7 +10,15 @@ $(function(){
 	$html += '<div id="contro2">切换</div>';
 	$html += '<img src="marks.jpg" title="marks" id="img3">';
 	$html += '<div id="contro3">变换</div>';
-	$html += '<div id="contro4">回到顶部</div>';
+	$html += '<ul></ul>';
+	$html += '<li>你</li>';
+	$html += '<li>是</li>';
+	$html += '<li class="c2">猪</li>';
+	$html += '<li>吗</li>';
+	$html += '<li>html</li>';
+	$html += '<li>js</li>';
+	$html += '<li>css</li>';
+	$html += '<li>vue</li>';
 	$("#zt").append($html);
 	// 使用fadeToggle,fadeIn,fadeOut三个方法控制淡入淡出效果
 	$("#contro").click(function(){
@@ -31,7 +39,32 @@ $(function(){
 	// 	});
 	// })
 	$("#contro3").click(function(){
-		$("#img3").animate({"width":"100px"},1000).animate({"height":"100px"},1000).css(
+		$("#img3").animate({width:"100px"},1000).animate({height:"100px"},1000).css(
 			"border","5px soild red").fadeToggle(500);
 	})
+	//制作“回到顶部”按钮
+	//控制回到顶部按钮时候显示还是不显示，
+	$("winodw").scroll(function(){
+		if($(this).scrollTop()>50){
+			$("#contro4").show();
+		}else{
+			$("#contro4").hide();
+		}
+	})
+	//控制按钮功能，点击后回到页面顶部
+	$("#contro4").click(function(){
+		$("html,body").animate({scrollTop:0},100);
+	})
+	//使用hasClass方法过滤同一元素不同类的选择并控制选中元素
+	$("li").click(function(){
+		if($(this).hasClass("c2")){
+		$(this).css("color","red");
+	}
+	})
+	// $(".c2").css("color","red");
+	//使用eq方法选择一系列元素的某一个元素
+	$("li").eq(0).click(function(){
+		$(this).css("color","blue");
+	})
+
 })	
