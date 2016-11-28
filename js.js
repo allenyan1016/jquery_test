@@ -10,6 +10,7 @@ $(function(){
 	$html += '<div id="contro2">切换</div>';
 	$html += '<img src="marks.jpg" title="marks" id="img3">';
 	$html += '<div id="contro3">变换</div>';
+	$html += '<div id="contro4">回到顶部</div>';
 	$html += '<ul></ul>';
 	$html += '<li>你</li>';
 	$html += '<li>是</li>';
@@ -73,4 +74,11 @@ $(function(){
 	$("li").filter(".c3").eq(0).css("color","green");
 	//使用not方法反向选择
 	$("li").not(".c3").css("color","#757575");
+	// 正则表达式练习
+	var reg1 = /\d{6}/;
+	var str1 = '331200';
+	console.log(reg1.test(str1));
+	var reg2 = /go+/;
+	var str2 = 'god';
+	console.log(reg2.test(str2));
 })	
