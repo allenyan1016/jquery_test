@@ -53,9 +53,33 @@
 <form>
 	<label for="name_in">姓名：</label>
 	<input type="text" id="name_in">
-	<label for="passward_in">密码：</label>
-	<input type="passward" name="" id="passward_in">
+	<label for="password_in">密码：</label>
+	<input type="password" name="" id="password_in">
 </form>
+<div>
+	<input type="radio" name="rai" >单选框
+	<input type="checkbox" name="chb">复选框
+</div>
+<hr/>
+<div>
+	<input type="radio" name="rai" id="ra"><label for="ra">单选框</label>
+	<input type="checkbox" name="chb" id="cb"><label for="cb">复选框</label>
+</div>
+<!-- <div>网站登录</div> -->
+	<!-- 使用fieldset和legend标签表单元素分类，fieldset标签可以将内部的表单元素归类
+	legend元素可以为fieldset标签内的表单元素起标题，并且可以通过disable属性来禁用fieldset内的所有表单元素 -->
+	<fieldset>
+	<legend>网站登录</legend>
+	<p>
+		<label for="log_in">账号：</label><input type="text" name="login_in" id="log_in">
+	</p>
+	<p>
+		<label for="pwd">密码：</label><input type="password" name="pass" id="pwd">
+	</p>
+	<input type="checkbox" name="me" id="r_me"><label for="r_me">记住我</label>
+	<input type="submit" name="提交">
+	</fieldset>
+<br/>
 **********************************************HTML于JS分割线********************************************************
 <br/>
 </body>
