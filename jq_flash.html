@@ -6,8 +6,57 @@
 	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="jquery.color.js"></script>
 	<script type="text/javascript" src="js.js"></script>
+	<!-- 使用link标签为浏览器栏添加小图标，rel和typ的值是固定形式，无需更改，小图标的文件名后缀
+	必须是ico后缀，不能是其他图片的后缀名，可以搜索“在线icon”即可制作想要的小图标-->
+	<link rel="shortcut icon" type="image/x-icon" href="http://ogz4i50cq.bkt.clouddn.com/wuhuang.ico">
+	<link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body id="zt">
+	<!-- 使用figure和figcaption两个标签来表示图片和图片标注，这两个是表示图片标注的专用标签，img
+	的alt属性和title属性一个是给搜索引擎看的，一个是给用户看的，alt是必输的，title是可选的 -->
+<figure>
+	<img src="http://ogz4i50cq.bkt.clouddn.com/qidong.jpg" alt="这是一个hexo启动图片" title="这是一个hexo启动图片">
+	<figcaption>这是一个hexo启动图片</figcaption>
+</figure>
 
+<table>
+	<!-- caption代表表格的标题 -->
+	<caption>这是一个表格</caption>
+
+	<!-- thead代表表格的表头 -->
+	<thead>
+		<tr>
+			<th>单元格1</th>
+			<th>单元格2</th>
+			<th>单元格3</th>
+		</tr>
+	</thead>
+
+	<!-- tbody代表表格的表身 -->
+	<tbody>
+		<tr>
+			<td>单元格1</td>
+			<td>单元格2</td>
+			<td>单元格3</td>
+		</tr>
+	</tbody>
+
+	<!-- tfoot代表表格的表脚 -->
+	<tfoot>
+		<tr>
+			<td>单元格1</td>
+			<td>单元格2</td>
+			<td>单元格3</td>
+		</tr>
+	</tfoot>
+</table>
+<form>
+	<label for="name_in">姓名：</label>
+	<input type="text" id="name_in">
+	<label for="passward_in">密码：</label>
+	<input type="passward" name="" id="passward_in">
+</form>
+**********************************************HTML于JS分割线********************************************************
+<br/>
 </body>
 </html>
