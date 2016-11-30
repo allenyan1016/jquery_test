@@ -2,3 +2,53 @@ body {
 	font-family: "微软雅黑",
 	font-size:140px;
 }
+
+#father {
+	width:200px;
+	height:200px;
+	border:1px solid black;
+	font-size:30px; 
+}
+
+#son {
+	width:50%;
+	height:50%;
+	border:1px solid black;
+	font-size:50%; 
+}
+
+#ap {
+	font-size: 15px;
+	text-indent:2em;
+	width: 500px;
+}
+
+#zt {
+	font-size: 62.5%;
+}
+
+.c1 {
+	font-size: 1em;
+}
+
+.c2 {
+	font-size: 1.5em;
+}
+
+.c3 {
+	font-size: 2em;
+}
+
+.c4 {
+	font-size: 15px;
+	width:150px;
+	height:75px;
+	text-indent: 30px;
+}
+
+.c5 {
+	font-size:1.5em;
+	width:10em;
+	height:5em;
+	text-indent: 2em;
+}
