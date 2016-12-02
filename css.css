@@ -24,7 +24,7 @@ body {
 }
 
 #zt {
-	font-size: 62.5%;
+	font-size: 16px;
 }
 
 .c1 {
@@ -52,3 +52,67 @@ body {
 	height:5em;
 	text-indent: 2em;
 }
+
+#button1 {
+	background: green;
+	/*width:100px;
+	height: 70px;*/
+	/*margin:30px;*/
+	padding:5px;
+	margin-left: 50px;
+	margin-right:1100px;
+	font-size: 16px;
+	padding-left: 70px;
+}
+
+#img1 {
+	/*vertical-align: text-bottom;*/
+	margin:0px 3px -3px 0px;
+}
+
+/*#d1,#d2 {
+	float:left;
+	color :white;
+}
+*/
+#d1 {
+	width:100%;
+	margin-right: -500px;
+	background: red;
+}
+
+#d2 {
+	width:500px;
+	background: purple;
+}
+
+#d1 p {
+	margin-right: 510px;
+}
+
+		.father {
+			position:relative;
+			width:200px;
+			height:100px;
+			border:1px dashed black;
+		}
+		.son {
+			position:absolute;
+			width:100px;
+			height:60px;
+			top:50%;
+			left:50%;
+			margin-top: -30px;
+			margin-left:-50px;
+			background:purple;
+		}
+		.son2 {
+			position:absolute;
+			width:100px;
+			height:60px;
+			top:50%;
+			left:50%;
+/*			margin-top: -30px;
+			margin-left:-50px;*/
+			background:red;
+		}
