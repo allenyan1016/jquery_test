@@ -122,3 +122,26 @@ body {
 	height:100px;
 	overflow:scroll;
 }
+
+.c6 {
+	width: 60px;
+	height:60px;
+	display:inline-block;
+	border:1px black solid;
+	font-size:20px;
+	text-align:center;
+	vertical-align: center;
+}
+
+#two {
+	display: none;
+}
+
+.c7 {
+	height:300px;
+	width:500px;
+	border:1px black solid;
+	display:table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
