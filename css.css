@@ -161,4 +161,44 @@ body {
 }
 */
 
+#father2 {
+	/*position:relative;*/
+	width:200px;
+	height:100px;
+	background:#00F9BB;
+}
 
+#son3 {
+	position: absolute;
+	width:70px;
+	height:50px;
+	right:70px;
+	/*bottom:-50px;*/
+	top:100px;
+	background:#AEF900;
+}
+
+#grandfather {
+	position:relative;
+	width:500px;
+	height:300px;
+	background:#D1D1D1;
+}
+
+#box {
+	width:0px;
+	height:0px;
+	border-width:20px;
+	border-style:solid;
+	/*border-color:green red black blue;*/
+	/*一个指向下的三角形*/
+	border-color:green transparent transparent transparent;
+	/*一个指向左的三角形*/
+	border-color:transparent green transparent transparent;
+	/*一个指向上的三角形*/
+	border-color:transparent transparent green transparent;
+	/*一个指向右的三角形*/
+	border-color:transparent transparent transparent green;
+	border-color:transparent transparent green green;
+	border-color:green green transparent transparent;
+}
