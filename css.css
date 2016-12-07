@@ -145,3 +145,20 @@ body {
 	text-align: center;
 	vertical-align: middle;
 }
+
+#img_float {
+	float:left;
+	width:100px;
+	height:100px;
+}
+
+.img_f {
+	height:100px;
+}
+
+/*#baba {
+	overflow:hidden;
+}
+*/
+
+
