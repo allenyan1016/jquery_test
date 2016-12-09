@@ -245,14 +245,65 @@ body {
 	border-color:transparent transparent black transparent;
 }
 
-#nei2 {
+/*#nei2 {
 	position:absolute;
 	width:0px;
 	height:0px;
 	border-width:9px;
-	/*top:1px;*/
+	top:1px;
 	top:-8px;
 	left:-9px;
 	border-style:solid;
 	border-color:transparent transparent #BBFFEE transparent;
+}*/
+
+#ra6 {
+	border-radius:70% 80% 90% 10%;
+	border:1px solid black;
+	width:30px;
+	height:30px;
+	text-align:center;
+	font-size:20px;
+	background:#7C0101;
+}
+/*画半圆时根据要的半圆的方向将相应的宽和高减少一半*/
+/*上半圆*/
+#ra7 {
+	border-radius:50px 50px 0px 0px;
+	border:1px solid black;
+	width:100px;
+	height:50px;
+	background:#7C0101;
+}
+/*下半圆*/
+#ra8 {
+	border-radius:0px 0px 50px 50px;
+	border:1px solid black;
+	width:100px;
+	height:50px;
+	background:#7C0101;
+}
+/*左半圆*/
+#ra9 {
+	border-radius:50px 0px 0px 50px;
+	border:1px solid black;
+	width:50px;
+	height:100px;
+	background:#7C0101;
+}
+/*右半圆*/
+#ra10 {
+	border-radius:0px 50px 50px 0px;
+	border:1px solid black;
+	width:50px;
+	height:100px;
+	background:#7C0101;
+}
+/*四分之一圆*/
+#ra11 {
+	border-radius:0px 50px 0px 0px;
+	border:1px solid black;
+	width:50px;
+	height:50px;
+	background:#7C0101;
 }
