@@ -202,3 +202,57 @@ body {
 	border-color:transparent transparent green green;
 	border-color:green green transparent transparent;
 }
+
+#wai {
+	position:relative;
+	width:0px;
+	height:0px;
+	border-width:30px;
+	border-style:solid;
+	border-color:transparent transparent black transparent;
+}
+
+#nei {
+	position:absolute;
+	width:0px;
+	height:0px;
+	border-width:29px;
+	/*top:1px;*/
+	top:-28px;
+	left:-29px;
+	border-style:solid;
+	border-color:transparent transparent #BBFFEE transparent;
+}
+
+#chat {
+	position:relative;
+	border-radius:10px;
+	border:1px black solid;
+	margin-top:50px; 
+	width:120px;
+	height:30px;
+	/*padding:20px 30px;*/
+	text-align: center;
+	vertical-align:center;
+}
+
+#wai2 {
+	position:relative;
+	width:0px;
+	height:0px;
+	border-width:10px;
+	border-style:solid;
+	border-color:transparent transparent black transparent;
+}
+
+#nei2 {
+	position:absolute;
+	width:0px;
+	height:0px;
+	border-width:9px;
+	/*top:1px;*/
+	top:-8px;
+	left:-9px;
+	border-style:solid;
+	border-color:transparent transparent #BBFFEE transparent;
+}
